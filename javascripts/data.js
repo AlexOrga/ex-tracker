@@ -1,12 +1,13 @@
 const loadLocations = require('./locations');
 const loadExInfo = require('./ex');
+const dom = require('./dom');
 
 const whenLocationsLoad = (data) => {
-  console.log('data: ', data);
+  $('#locations').html(dom.locationDom(data.locations));
 };
 
 const whenExInfoLoads = (data) => {
-  console.log('data: ', data);
+  $('#exInfo').html(dom.exDom(data.ex));
 };
 
 const loadFail = () => {

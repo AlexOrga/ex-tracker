@@ -1,10 +1,8 @@
 {
-  "ex" : [
-    {
+  "ex" : {
       "image" : "https://www.salzburg.info/01-das-ist-salzburg/0105-advent/image-thumb__38884__slider-main/krampus-christkindlmarkt-04~-~767w.jpeg",
       "name" : "Krampus",
       "age" : 28,
       "flaws" : ["yellow teeth", "smokes", "is a butthead"]
-    }
-  ]
+  }
 }
