@@ -1,0 +1,28 @@
+{
+  "locations" : [
+    {
+      "image" : "https://media.bizj.us/view/img/3136211/krispy-kreme-1*1200xx2500-1406-0-131.jpg",
+      "name" : "Krispy Kreme Donuts",
+      "address" : "124 East Holland Dale Rd",
+      "timeOfDay" : "Morning"
+    },
+    {
+      "image" : "https://i.pinimg.com/originals/84/c2/30/84c230c05d7da485c06793d3a6602431.jpg",
+      "name" : "Tin Dog Tavern",
+      "address" : "1401 4th Ave S",
+      "timeOfDay" : "Dark"
+    },
+    {
+      "image" : "https://usercontent2.hubstatic.com/12781529.jpg",
+      "name" : "Hell",
+      "address" : "666 Drury Lane",
+      "timeOfDay" : "Afternoon"
+    },
+    {
+      "image" : "http://munfitnessblog.com/wp-content/uploads/2011/08/Pole-Dancing-Class.jpg",
+      "name" : "On the pole",
+      "address" : "6969 East 69th St",
+      "timeOfDay" : "Evening"
+    },
+  ]
+}
