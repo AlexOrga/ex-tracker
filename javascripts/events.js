@@ -1,3 +1,7 @@
+jQuery.expr[':'].icontains = function (a, i, m) {
+  return jQuery(a).text().toUpperCase()
+    .indexOf(m[3].toUpperCase()) >= 0;
+};
 
 const addButtonEvents = () => {
   $('.btn').on('click', () => {
@@ -19,14 +23,8 @@ const getSearch = () => {
   $('#search-bar').keypress((event) => {
     if (event.which === 13) {
       const searched = $('#search-bar').val();
-      console.log('searched: ', searched);
-      const contents = $('#locations').html();
-      console.log('contents: ', contents);
+      $(`#locations .location-card:not(:icontains(${searched}))`).hide();
     }
-  // const searched = $('#search-bar').val();
-  // console.log('searched: ', searched);
-  // const contents = $('#locations .location-card').contents();
-  // console.log('contents: ', contents);
   });
 };
 
