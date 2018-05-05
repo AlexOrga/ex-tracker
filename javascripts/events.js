@@ -1,4 +1,3 @@
-
 const addButtonEvents = () => {
   $('.btn').on('click', () => {
     $('#locations .location-card').show();
@@ -19,14 +18,8 @@ const getSearch = () => {
   $('#search-bar').keypress((event) => {
     if (event.which === 13) {
       const searched = $('#search-bar').val();
-      console.log('searched: ', searched);
-      const contents = $('#locations').html();
-      console.log('contents: ', contents);
+      $(`#locations .location-card:not(:contains(${searched}))`).toLowerCase.hide();
     }
-  // const searched = $('#search-bar').val();
-  // console.log('searched: ', searched);
-  // const contents = $('#locations .location-card').contents();
-  // console.log('contents: ', contents);
   });
 };
 
