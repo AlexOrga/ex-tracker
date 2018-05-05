@@ -1,9 +1,13 @@
 const loadLocations = require('./locations');
 const loadExInfo = require('./ex');
 const dom = require('./dom');
+const events = require('./events');
 
 const whenLocationsLoad = (data) => {
-  $('#locations').html(dom.locationDom(data.locations));
+  const locations = data.locations;
+  $('#locations').html(dom.locationDom(locations));
+  events.addButtonEvents();
+  events.getSearch();
 };
 
 const whenExInfoLoads = (data) => {
