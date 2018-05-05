@@ -2,7 +2,7 @@
 const locationDom = (locations) => {
   let domString = '';
   locations.forEach((location) => {
-    domString += `<div class="location-card col-lg-6">`;
+    domString += `<div class="location-card ${location.timeOfDay} col-lg-6">`;
     domString +=    `<img src="${location.image}">`;
     domString +=    `<h3>${location.name}</h3>`;
     domString +=    `<h4>${location.address}</h4>`;
