@@ -55,6 +55,7 @@ const exDom = (exInfo) => {
     domString +=    `<h4>${ex.age}</h4>`;
     domString +=    `<h4>Flaws:</h4>`;
     domString +=    `<p>${ex.flaws}</p>`;
+    domString +=    `<button class="mfr btn btn-danger">More About This MothaF*#$%</button>`;
     domString +=  `</div>`;
   });
   $('#exInfo').html(domString);

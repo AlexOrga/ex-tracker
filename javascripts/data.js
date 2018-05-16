@@ -1,6 +1,7 @@
 // const loadLocations = require('./locations');
 // const loadExInfo = require('./ex');
 const dom = require('./dom');
+const events = require('./events');
 // const events = require('./events');
 
 // const whenLocationsLoad = (data) => {
@@ -44,9 +45,14 @@ const locationLoad = () => {
   });
 };
 
+const singleEx = () => {
+  let ex = {};
+};
+
 const initializer = () => {
   exLoad().then((exes) => {
     dom.exDom(exes);
+    events.mothaF();
     locationLoad().then((locations) => {
       dom.locationDom(locations, exes);
     });

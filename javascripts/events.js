@@ -28,7 +28,14 @@ const getSearch = () => {
   });
 };
 
+const mothaF = () => {
+  $('.mfr').on('click', (e) => {
+    alert('Hey i work!');
+  });
+};
+
 module.exports = {
   addButtonEvents,
   getSearch,
+  mothaF,
 };
