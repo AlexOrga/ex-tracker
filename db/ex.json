@@ -1,8 +1,32 @@
 {
-  "ex" : {
+  "exes" : [
+    {
       "image" : "https://www.salzburg.info/01-das-ist-salzburg/0105-advent/image-thumb__38884__slider-main/krampus-christkindlmarkt-04~-~767w.jpeg",
       "name" : "Krampus",
       "age" : 28,
-      "flaws" : ["yellow teeth", "smokes", "is a butthead"]
-  }
+      "flaws" : "Has yellow teeth and enjoys ruining christmases",
+      "locations" : [1, 4, 6]
+    },
+    {
+      "image" : "https://i.imgur.com/dEsKWpU.jpg",
+      "name" : "Shandra",
+      "age" : 34,
+      "flaws" : "She has two flaws and each one of them is on her face",
+      "locations" : [2, 4, 5]
+    },
+    {
+      "image" : "https://media.wmagazine.com/photos/5853d2e2c7188f9b26c944ec/master/pass/bear-bad-hair-trend-01.jpg",
+      "name" : "Knischly Flerjorg",
+      "age" : 26,
+      "flaws" : "Is an emotional rollercoaster",
+      "locations" : [3, 5, 6]
+    },
+    {
+      "image" : "https://i.ytimg.com/vi/vgLgd6oEvng/maxresdefault.jpg",
+      "name" : "Kelly",
+      "age" : 25,
+      "flaws" : "Whenever she grabs a bag of chips she crushes all of them",
+      "locations" : [2, 3, 4]
+    }
+  ]
 }

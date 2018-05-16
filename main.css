@@ -1,8 +1,9 @@
 img {
   width: 300px;
+  margin-top: 20px;
 }
 
 .location-card {
-  height: 500px;
+  height: 430px;
   border: 1px solid red;
 }
