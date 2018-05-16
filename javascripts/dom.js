@@ -26,7 +26,7 @@
 //   return domString;
 // };
 
-const locationDom = (locations) => {
+const locationDom = (locations, exes) => {
   let domString = '';
   locations.forEach((location) => {
     domString += `<div class="location-card ${location.timeOfDay} col-lg-6">`;
@@ -34,6 +34,13 @@ const locationDom = (locations) => {
     domString +=    `<h3>${location.name}</h3>`;
     domString +=    `<h4>${location.address}</h4>`;
     domString +=    `<p><strong>Time of Day: <strong> ${location.timeOfDay}</p>`;
+    exes.forEach((ex) => {
+      ex.locationNums.forEach((num) => {
+        if (num === location.locationId) {
+          domString += `<p>${ex.name}</p>`;
+        }
+      });
+    });
     domString +=  `</div>`;
   });
   $('#locations').html(domString);
