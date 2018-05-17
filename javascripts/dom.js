@@ -46,10 +46,23 @@ const locationDom = (locations, exes) => {
   $('#locations').html(domString);
 };
 
+const singleLocationDom = (locations) => {
+  let domString = '';
+  locations.forEach((location) => {
+    domString += `<div class="location-card ${location.timeOfDay} col-lg-6">`;
+    domString +=    `<img src="${location.image}">`;
+    domString +=    `<h3>${location.name}</h3>`;
+    domString +=    `<h4>${location.address}</h4>`;
+    domString +=    `<p><strong>Time of Day: <strong> ${location.timeOfDay}</p>`;
+    domString +=  `</div>`;
+  });
+  $('#locations').html(domString);
+};
+
 const exDom = (exInfo) => {
   let domString = '';
   exInfo.forEach((ex) => {
-    domString +=  `<div>`;
+    domString +=  `<div class="col-md-6">`;
     domString +=    `<img src="${ex.image}">`;
     domString +=    `<h3>${ex.name}</h3>`;
     domString +=    `<h4>${ex.age}</h4>`;
@@ -61,7 +74,22 @@ const exDom = (exInfo) => {
   $('#exInfo').html(domString);
 };
 
+const singleExDom = (exName) => {
+  let domString = '';
+  domString +=  `<div class="col-md-6">`;
+  domString +=    `<img src="${exName.image}">`;
+  domString +=    `<h3>${exName.name}</h3>`;
+  domString +=    `<h4>${exName.age}</h4>`;
+  domString +=    `<h4>Flaws:</h4>`;
+  domString +=    `<p>${exName.flaws}</p>`;
+  domString +=    `<button class="mfr btn btn-danger">More About This MothaF*#$%</button>`;
+  domString +=  `</div>`;
+  $('#exInfo').html(domString);
+};
+
 module.exports = {
   locationDom,
   exDom,
+  singleExDom,
+  singleLocationDom,
 };

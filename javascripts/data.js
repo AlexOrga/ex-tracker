@@ -45,17 +45,21 @@ const locationLoad = () => {
   });
 };
 
-const singleEx = () => {
-  let ex = {};
-};
+// const singleEx = (event) => {
+//   alert(e.target.name);
+// };
 
 const initializer = () => {
+  events.addButtonEvents();
+  events.getSearch();
+
   exLoad().then((exes) => {
     dom.exDom(exes);
-    events.mothaF();
     locationLoad().then((locations) => {
       dom.locationDom(locations, exes);
+      events.mothaF(locations, exes);
     });
+
   });
   // locationLoad().then((locations) => {
   //   dom.locationDom(locations);
@@ -64,4 +68,6 @@ const initializer = () => {
 
 module.exports = {
   initializer,
+  exLoad,
+  // singleEx,
 };

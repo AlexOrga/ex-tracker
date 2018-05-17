@@ -1,3 +1,6 @@
+// const data = require('./data');
+const dom = require('./dom');
+
 jQuery.expr[':'].icontains = function (a, i, m) {
   return jQuery(a).text().toUpperCase()
     .indexOf(m[3].toUpperCase()) >= 0;
@@ -28,9 +31,24 @@ const getSearch = () => {
   });
 };
 
-const mothaF = () => {
+const mothaF = (locations, exes) => {
   $('.mfr').on('click', (e) => {
-    alert('Hey i work!');
+    const name = e.target.parentNode.children[1].innerHTML;
+    exes.forEach((ex) => {
+      if (name === ex.name) {
+        const exLocation = [];
+        dom.singleExDom(ex);
+
+        ex.locationNums.forEach((num) => {
+          locations.forEach((location) => {
+            if (num === location.locationId) {
+              exLocation.push(location);
+            }
+          });
+        });
+        dom.singleLocationDom(exLocation);
+      }
+    });
   });
 };
 
