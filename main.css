@@ -1,5 +1,18 @@
+#search-bar {
+  display: block;
+  margin: 10px auto;
+  font-size: 25px;
+}
+
+.btn-danger {
+  /* width: 100px; */
+  margin-left: 10px;
+  font-size: 20px;
+}
+
 img {
   width: 300px;
+  max-height: 400px;
   margin-top: 20px;
 }
 
