@@ -1,26 +1,51 @@
-const loadLocations = require('./locations');
-const loadExInfo = require('./ex');
-const dom = require('./dom');
-const events = require('./events');
+let exesData = [];
+let locationsData = [];
 
-const whenLocationsLoad = (data) => {
-  const locations = data.locations;
-  $('#locations').html(dom.locationDom(locations));
-  events.addButtonEvents();
-  events.getSearch();
+const exJSON = () => {
+  return new Promise((resolve, reject) => {
+    $.get('../db/ex.json')
+      .done((data) => {
+        resolve(data.exes);
+      })
+      .fail((error) => {
+        reject('oops!', error);
+      });
+  });
 };
 
-const whenExInfoLoads = (data) => {
-  $('#exInfo').html(dom.exDom(data.ex));
+const locationJSON = () => {
+  return new Promise((resolve, reject) => {
+    $.get('../db/locations.json')
+      .done((data) => {
+        resolve(data.locations);
+      })
+      .fail((error) => {
+        reject('oops!', error);
+      });
+  });
 };
 
-const loadFail = () => {
-  console.error('Whoops! There was an error, try again!');
+const getAllData = () => {
+  return Promise.all([exJSON(), locationJSON(),])
+    .then((results) => {
+      exesData = results[0];
+      locationsData = results[1];
+    })
+    .catch((err) => {
+      console.error('Oops there was an error', err);
+    });
 };
 
-const initializer = () => {
-  loadLocations(whenLocationsLoad, loadFail);
-  loadExInfo(whenExInfoLoads, loadFail);
+const getExes = () => {
+  return exesData;
 };
 
-module.exports = initializer;
+const getLocations = () => {
+  return locationsData;
+};
+
+module.exports = {
+  getAllData,
+  getExes,
+  getLocations,
+};

@@ -1,3 +1,6 @@
+const data = require('./data');
+const dom = require('./dom');
+
 jQuery.expr[':'].icontains = function (a, i, m) {
   return jQuery(a).text().toUpperCase()
     .indexOf(m[3].toUpperCase()) >= 0;
@@ -28,7 +31,46 @@ const getSearch = () => {
   });
 };
 
+const mothaF = () => {
+  $('.mfr').on('click', (e) => {
+    const exData = data.getExes();
+    const locationData = data.getLocations();
+    const currentId = (e.target.id * 1);
+    exData.forEach((ex) => {
+      if (ex.id === currentId) {
+        dom.singleExDom(ex);
+
+        const locationsForEx = [];
+        ex.locationNums.forEach((num) => {
+          locationData.forEach((location) => {
+            if (num === location.locationId) {
+              locationsForEx.push(location);
+              dom.singleLocationDom(locationsForEx);
+              backButton();
+              addButtonEvents();
+              getSearch();
+            }
+          });
+        });
+      };
+    });
+  });
+};
+
+const backButton = () => {
+  $('#back-btn').on('click', () => {
+    data.getAllData().then(() => {
+      const exData = data.getExes();
+      const locationData = data.getLocations();
+      dom.exDom(exData);
+      dom.locationDom(locationData, exData);
+      mothaF();
+    });
+  });
+};
+
 module.exports = {
   addButtonEvents,
   getSearch,
+  mothaF,
 };

@@ -4,20 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="./main.css">
   <title>Ex-Tracker</title>
 </head>
 <body class="text-center">
-  <button class="btn btn-danger" id="morningBtn">Morning</button>
-  <button class="btn btn-danger" id="afternoonBtn">Afternoon</button>
-  <button class="btn btn-danger" id="eveningBtn">Evening</button>
-  <button class="btn btn-danger" id="darkBtn">Dark</button>
 
-  <input type="text" placeholder="Search a location..." id="search-bar">
+  <!-- <div class="main-img">
+    <h1>Ex-Tracker</h1>
+  </div> -->
 
-  <div id="exInfo"></div>
-  <div id="locations"></div>
+  <div class="jumbotron main-img">
+      <h1>Ex-Tracker</h1>
+      <p><a class="btn btn-primary btn-lg" id="get-started" href="#search-bar" role="button">Get Started</a></p>
+    </div>
+
+  <div class="main-content">
+    <input type="text" placeholder="Search a location..." id="search-bar">
+
+    <button class="btn" id="morningBtn">Morning</button>
+    <button class="btn" id="afternoonBtn">Afternoon</button>
+    <button class="btn" id="eveningBtn">Evening</button>
+    <button class="btn" id="darkBtn">Dark</button>
+
+    <div id="exInfo"></div>
+    <div id="locations"></div>
+  </div>
 
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"

@@ -4,25 +4,43 @@
       "image" : "https://media.bizj.us/view/img/3136211/krispy-kreme-1*1200xx2500-1406-0-131.jpg",
       "name" : "Krispy Kreme Donuts",
       "address" : "124 East Holland Dale Rd",
-      "timeOfDay" : "Morning"
+      "timeOfDay" : "Morning",
+      "locationId" : 1
     },
     {
       "image" : "https://i.pinimg.com/originals/84/c2/30/84c230c05d7da485c06793d3a6602431.jpg",
       "name" : "Tin Dog Tavern",
       "address" : "1401 4th Ave S",
-      "timeOfDay" : "Dark"
+      "timeOfDay" : "Dark",
+      "locationId" : 2
     },
     {
       "image" : "https://usercontent2.hubstatic.com/12781529.jpg",
       "name" : "Hell",
       "address" : "666 Drury Lane",
-      "timeOfDay" : "Afternoon"
+      "timeOfDay" : "Afternoon",
+      "locationId" : 3
     },
     {
       "image" : "http://munfitnessblog.com/wp-content/uploads/2011/08/Pole-Dancing-Class.jpg",
       "name" : "On the pole",
       "address" : "6969 East 69th St",
-      "timeOfDay" : "Evening"
+      "timeOfDay" : "Evening",
+      "locationId" : 4
+    },
+    {
+      "image" : "http://creategermany.typepad.com/.a/6a00e550a2dcf48834010534d5ee9b970b-pi",
+      "name" : "Drinking under a bridge",
+      "address" : "2345 Vagabond Dr",
+      "timeOfDay" : "Evening",
+      "locationId" : 5
+    },
+    {
+      "image" : "https://c1.staticflickr.com/7/6031/6339912500_6856e14a6a_b.jpg",
+      "name" : "Grumpy's Bail Bonds",
+      "address" : "117 Union St",
+      "timeOfDay" : "Evening",
+      "locationId" : 6
     }
   ]
 }
