@@ -1,12 +1,11 @@
-const dom = require('./dom');
-const events = require('./events');
+let exesData = [];
+let locationsData = [];
 
-const exLoad = () => {
-  return new Promise ((resolve, reject) => {
+const exJSON = () => {
+  return new Promise((resolve, reject) => {
     $.get('../db/ex.json')
       .done((data) => {
-        const exes = data.exes;
-        resolve(exes);
+        resolve(data.exes);
       })
       .fail((error) => {
         reject('oops!', error);
@@ -14,12 +13,11 @@ const exLoad = () => {
   });
 };
 
-const locationLoad = () => {
+const locationJSON = () => {
   return new Promise((resolve, reject) => {
     $.get('../db/locations.json')
       .done((data) => {
-        const locations = data.locations;
-        resolve(locations);
+        resolve(data.locations);
       })
       .fail((error) => {
         reject('oops!', error);
@@ -27,21 +25,27 @@ const locationLoad = () => {
   });
 };
 
-const initializer = () => {
-  events.addButtonEvents();
-  events.getSearch();
-
-  exLoad().then((exes) => {
-    dom.exDom(exes);
-    locationLoad().then((locations) => {
-      dom.locationDom(locations, exes);
-      events.mothaF(locations, exes);
+const getAllData = () => {
+  return Promise.all([exJSON(), locationJSON(),])
+    .then((results) => {
+      exesData = results[0];
+      locationsData = results[1];
+    })
+    .catch((err) => {
+      console.error('Oops there was an error', err);
     });
+};
 
-  });
+const getExes = () => {
+  return exesData;
+};
+
+const getLocations = () => {
+  return locationsData;
 };
 
 module.exports = {
-  initializer,
-  exLoad,
+  getAllData,
+  getExes,
+  getLocations,
 };

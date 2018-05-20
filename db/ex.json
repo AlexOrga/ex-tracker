@@ -5,28 +5,32 @@
       "name" : "Trish",
       "age" : 28,
       "flaws" : "Whenever she smiles all the cars around us slow down",
-      "locationNums" : [1, 4, 6]
+      "locationNums" : [1, 4, 6],
+      "id" : 0
     },
     {
       "image" : "https://i.imgur.com/dEsKWpU.jpg",
       "name" : "Shandra",
       "age" : 34,
       "flaws" : "She has two flaws and each one of them is on her face",
-      "locationNums" : [2, 4, 5]
+      "locationNums" : [2, 4, 5],
+      "id" : 1
     },
     {
       "image" : "https://media.wmagazine.com/photos/5853d2e2c7188f9b26c944ec/master/pass/bear-bad-hair-trend-01.jpg",
       "name" : "Knischly Flerjorg",
       "age" : 26,
       "flaws" : "Is an emotional rollercoaster",
-      "locationNums" : [3, 5, 6]
+      "locationNums" : [3, 5, 6],
+      "id" : 2
     },
     {
       "image" : "https://i.ytimg.com/vi/vgLgd6oEvng/maxresdefault.jpg",
       "name" : "Kelly",
       "age" : 25,
       "flaws" : "Whenever she grabs a bag of chips she crushes all of them",
-      "locationNums" : [2, 3, 4]
+      "locationNums" : [2, 3, 4],
+      "id" : 3
     }
   ]
 }

@@ -1,4 +1,4 @@
-// const data = require('./data');
+const data = require('./data');
 const dom = require('./dom');
 
 jQuery.expr[':'].icontains = function (a, i, m) {
@@ -31,23 +31,40 @@ const getSearch = () => {
   });
 };
 
-const mothaF = (locations, exes) => {
+const mothaF = () => {
   $('.mfr').on('click', (e) => {
-    const name = e.target.parentNode.children[1].innerHTML;
-    exes.forEach((ex) => {
-      if (name === ex.name) {
-        const exLocation = [];
+    const exData = data.getExes();
+    const locationData = data.getLocations();
+    const currentId = (e.target.id * 1);
+    exData.forEach((ex) => {
+      if (ex.id === currentId) {
         dom.singleExDom(ex);
 
+        const locationsForEx = [];
         ex.locationNums.forEach((num) => {
-          locations.forEach((location) => {
+          locationData.forEach((location) => {
             if (num === location.locationId) {
-              exLocation.push(location);
+              locationsForEx.push(location);
+              dom.singleLocationDom(locationsForEx);
+              backButton();
+              addButtonEvents();
+              getSearch();
             }
           });
         });
-        dom.singleLocationDom(exLocation);
-      }
+      };
+    });
+  });
+};
+
+const backButton = () => {
+  $('#back-btn').on('click', () => {
+    data.getAllData().then(() => {
+      const exData = data.getExes();
+      const locationData = data.getLocations();
+      dom.exDom(exData);
+      dom.locationDom(locationData, exData);
+      mothaF();
     });
   });
 };

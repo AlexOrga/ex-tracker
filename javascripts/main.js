@@ -1,3 +1,8 @@
-const data = require('./data');
+const initializer = require('./initialize');
+const events = require('./events');
 
-data.initializer();
+$(document).ready(() => {
+  initializer();
+  events.addButtonEvents();
+  events.getSearch();
+});
