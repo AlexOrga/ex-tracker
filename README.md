@@ -5,6 +5,12 @@ An app for me to keep track of my ex-girlfriends' most frequented locations so t
 
 # Screen Shots
 
+![Webpage](https://github.com/AlexOrga/ex-tracker/blob/master/screenshots/Ex-Track1.png?raw=true)
+
+![Webpage](https://raw.githubusercontent.com/AlexOrga/ex-tracker/master/screenshots/Ex-Track2.png)
+
+![Webpage](https://raw.githubusercontent.com/AlexOrga/ex-tracker/master/screenshots/Ex-Track3.png)
+
 # How to Run
 
 - Requires Node.js
